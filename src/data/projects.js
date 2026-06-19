@@ -1,0 +1,75 @@
+export const projects = [
+  {
+    title: "Freestyle Workout Tracker",
+    category: "Fitness / Edzésnapló webapp",
+    description:
+      "Mobilbarát edzésnapló calisthenics és saját testsúlyos edzésekhez. Edzés közben rögzíti a szetteket timerrel, pihenőidőzítővel és tartás számlálóval. Local-first mentés a böngészőben, Firebase szinkron bejelentkezés után — pontszámítás, erőbecslés és Progress statisztikák.",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "localStorage",
+      "Web Audio API",
+    ],
+    link: "https://freestyle-workout-tracker.vercel.app/",
+    image: "/projects/freestyle-workout-tracker.png",
+  },
+  {
+    title: "SMASH Strandröplabda",
+    category: "Sport / Full-stack webalkalmazás",
+    description:
+      "A SMASH Strandröplabda Sportegyesület hivatalos oldala és ügyviteli felülete: pályafoglalási naptár szabályokkal, versenynevezés, csütörtöki bajnokság ranglista, admin felület és e-mail értesítések. Élesben: balatonsse.hu.",
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+      "REST API",
+      "Brevo",
+      "Leaflet",
+    ],
+    link: "https://balatonsse.hu",
+    image: "/projects/smash-strandroplabda.png",
+  },
+  {
+    title: "Glass & Moss",
+    category: "Vállalkozói weboldal",
+    description:
+      "Hivatalos vállalkozói weboldal terráriumokhoz és paludáriumokhoz: portfólió-galéria kategóriákkal, kapcsolatfelvételi űrlap, terráriumgondozási útmutató aloldal, GDPR-kompatibilis jogi oldalak és cookie-banner.",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Formspree",
+      "SEO",
+      "Open Graph",
+    ],
+    link: "https://glassandmoss.hu",
+    image: "/projects/glass-and-moss.png",
+  },
+  {
+    title: "BeatClash",
+    category: "Játék / Realtime multiplayer · Fejlesztés alatt",
+    description:
+      "Böngészős, valós idejű multiplayer lo-fi beat battle játék. Öt körben építik a játékosok a beatet 16 lépéses sequencerrel, majd meghallgatják és értékelik egymás munkáját. Az alap UI és a realtime backend struktúra kész, a teljes multiplayer flow bővül.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+    ],
+    link: "https://github.com/DoNaT231",
+    image: "/projects/beatclash.png",
+  },
+]

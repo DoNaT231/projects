@@ -15,6 +15,7 @@ export const projects = [
       "Web Audio API",
     ],
     link: "https://freestyle-workout-tracker.vercel.app/",
+    github: "https://github.com/DoNaT231/FreestyleWorkoutTracker",
     image: "/projects/freestyle-workout-tracker.png",
   },
   {
@@ -35,6 +36,7 @@ export const projects = [
       "Leaflet",
     ],
     link: "https://balatonsse.hu",
+    githubPrivate: true,
     image: "/projects/smash-strandroplabda.png",
   },
   {
@@ -52,6 +54,7 @@ export const projects = [
       "Open Graph",
     ],
     link: "https://glassandmoss.hu",
+    github: "https://github.com/DoNaT231/GlassAndMoss",
     image: "/projects/glass-and-moss.png",
   },
   {
@@ -69,7 +72,8 @@ export const projects = [
       "Prisma",
       "Tailwind CSS",
     ],
-    link: "https://github.com/DoNaT231",
+    inDevelopment: true,
+    githubPrivate: true,
     image: "/projects/beatclash.png",
   },
 ]

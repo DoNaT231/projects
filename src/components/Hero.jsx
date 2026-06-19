@@ -3,9 +3,6 @@ function Hero() {
       <section className="mx-auto flex min-h-[78vh] max-w-6xl items-center px-5 py-20">
         <div className="grid items-center gap-12 md:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <p className="mb-5 inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-300">
-              Óbudai Egyetem · Gazdaságinformatika · Szakmai gyakorlat
-            </p>
   
             <h1 className="max-w-4xl text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl">
               Komoróczy Donát

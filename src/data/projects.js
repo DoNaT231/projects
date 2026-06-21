@@ -1,9 +1,7 @@
 export const projects = [
   {
+    id: "workout-tracker",
     title: "Freestyle Workout Tracker",
-    category: "Fitness / Edzésnapló webapp",
-    description:
-      "Mobilbarát edzésnapló calisthenics és saját testsúlyos edzésekhez. Edzés közben rögzíti a szetteket timerrel, pihenőidőzítővel és tartás számlálóval. Local-first mentés a böngészőben, Firebase szinkron bejelentkezés után — pontszámítás, erőbecslés és Progress statisztikák.",
     tech: [
       "React",
       "Vite",
@@ -19,10 +17,8 @@ export const projects = [
     image: "/projects/freestyle-workout-tracker.png",
   },
   {
+    id: "smash",
     title: "SMASH Strandröplabda",
-    category: "Sport / Full-stack webalkalmazás",
-    description:
-      "A SMASH Strandröplabda Sportegyesület hivatalos oldala és ügyviteli felülete: pályafoglalási naptár szabályokkal, versenynevezés, csütörtöki bajnokság ranglista, admin felület és e-mail értesítések. Élesben: balatonsse.hu.",
     tech: [
       "React",
       "Tailwind CSS",
@@ -40,10 +36,8 @@ export const projects = [
     image: "/projects/smash-strandroplabda.png",
   },
   {
+    id: "glass-moss",
     title: "Glass & Moss",
-    category: "Vállalkozói weboldal",
-    description:
-      "Hivatalos vállalkozói weboldal terráriumokhoz és paludáriumokhoz: portfólió-galéria kategóriákkal, kapcsolatfelvételi űrlap, terráriumgondozási útmutató aloldal, GDPR-kompatibilis jogi oldalak és cookie-banner.",
     tech: [
       "React",
       "Vite",
@@ -58,10 +52,8 @@ export const projects = [
     image: "/projects/glass-and-moss.png",
   },
   {
+    id: "beatclash",
     title: "BeatClash",
-    category: "Játék / Realtime multiplayer · Fejlesztés alatt",
-    description:
-      "Böngészős, valós idejű multiplayer lo-fi beat battle játék. Öt körben építik a játékosok a beatet 16 lépéses sequencerrel, majd meghallgatják és értékelik egymás munkáját. Az alap UI és a realtime backend struktúra kész, a teljes multiplayer flow bővül.",
     tech: [
       "React",
       "TypeScript",

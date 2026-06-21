@@ -1,43 +1,33 @@
 import SectionTitle from "./SectionTitle"
+import { useLanguage } from "../i18n/LanguageContext"
 
 function About() {
+  const { t } = useLanguage()
+
+  const cards = [
+    { title: t.about.studiesTitle, text: t.about.studiesText },
+    { title: t.about.projectsTitle, text: t.about.projectsText },
+    { title: t.about.careerTitle, text: t.about.careerText },
+  ]
+
   return (
     <section id="about" className="mx-auto max-w-6xl px-5 py-24">
       <SectionTitle
-        eyebrow="Rólam"
-        title="Gazdaságinformatika hallgató, gyakorlati webfejlesztési tapasztalattal."
-        text="2023 szeptemberében kezdtem az Óbudai Egyetemen a gazdaságinformatika képzést. A tanulmányok mellett valós webes projekteket építek — embereknek és vállalkozásoknak is —, és ezen az oldalon mutatom be a munkáimat."
+        eyebrow={t.about.eyebrow}
+        title={t.about.title}
+        text={t.about.text}
       />
 
       <div className="grid gap-5 md:grid-cols-3">
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-          <h3 className="text-xl font-semibold text-white">Tanulmányok</h3>
-          <p className="mt-4 leading-7 text-slate-400">
-            Óbudai Egyetem, gazdaságinformatika BSc — 2023 szeptemberi
-            kezdéssel, összesen 7 félév. Jelenleg az utolsó félévem előtt
-            állok, és szakmai gyakorlatot keresek a diploma előtt.
-          </p>
-        </div>
-
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-          <h3 className="text-xl font-semibold text-white">Webes projektek</h3>
-          <p className="mt-4 leading-7 text-slate-400">
-            Már készítettem weboldalakat magánszemélyeknek és vállalkozásoknak,
-            emellett saját, „fun” projekteken is dolgozom. React-alapú
-            frontendtől full-stack megoldásokig — a portfóliómban láthatóak az
-            éles és fejlesztés alatt álló munkáim.
-          </p>
-        </div>
-
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-          <h3 className="text-xl font-semibold text-white">Karriercél</h3>
-          <p className="mt-4 leading-7 text-slate-400">
-            Szakmai gyakorlatot keresek fejlesztés irányában, és szívesen
-            kipróbálnám magam egy szoftverfejlesztő csapatban — akár közvetítő
-            vagy Scrum-folyamat résztvevő szerepkörben is. AI eszközként
-            főleg a Cursort használom a mindennapi fejlesztéshez.
-          </p>
-        </div>
+        {cards.map((card) => (
+          <div
+            key={card.title}
+            className="rounded-3xl border border-white/10 bg-white/[0.04] p-6"
+          >
+            <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+            <p className="mt-4 leading-7 text-slate-400">{card.text}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

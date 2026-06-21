@@ -1,77 +1,19 @@
 import SectionTitle from "./SectionTitle"
-
-const skillGroups = [
-  {
-    title: "Frontend",
-    items: [
-      "React",
-      "JavaScript",
-      "TypeScript",
-      "HTML / CSS",
-      "Tailwind CSS",
-      "React Router",
-      "Vite",
-      "Reszponzív design",
-      "Komponens architektúra",
-    ],
-  },
-  {
-    title: "Backend & adat",
-    items: [
-      "Node.js",
-      "Express",
-      "REST API",
-      "PostgreSQL",
-      "Prisma ORM",
-      "Firebase Auth",
-      "Cloud Firestore",
-      "JWT",
-      "Socket.IO",
-      "Brevo",
-    ],
-  },
-  {
-    title: "Üzleti logika & UX",
-    items: [
-      "Local-first mentés",
-      "Feature-alapú struktúra",
-      "Repository–service réteg",
-      "Szerepkör-alapú jogosultság",
-      "SEO & Open Graph",
-      "GDPR / cookie kezelés",
-      "Landing page",
-      "Tartalomstruktúra",
-      "Scrum / csapatfolyamatok",
-    ],
-  },
-  {
-    title: "Eszközök & deploy",
-    items: [
-      "Git / GitHub",
-      "Cursor",
-      "Vite",
-      "ESLint",
-      "VPS",
-      "Nginx",
-      "PM2",
-      "Formspree",
-      "Leaflet",
-      "Web Audio API",
-    ],
-  },
-]
+import { useLanguage } from "../i18n/LanguageContext"
 
 function Skills() {
+  const { t } = useLanguage()
+
   return (
     <section id="skills" className="mx-auto max-w-6xl px-5 py-24">
       <SectionTitle
-        eyebrow="Készségek"
-        title="Technikai eszköztár."
-        text="A stack, amit a saját és ügyfélprojektekben használok — React-alapú frontendtől Firebase és PostgreSQL backendig, realtime kommunikációtól local-first adatkezelésig."
+        eyebrow={t.skills.eyebrow}
+        title={t.skills.title}
+        text={t.skills.text}
       />
 
       <div className="grid gap-5 md:grid-cols-4">
-        {skillGroups.map((group) => (
+        {t.skills.groups.map((group) => (
           <div
             key={group.title}
             className="rounded-3xl border border-white/10 bg-white/[0.04] p-6"

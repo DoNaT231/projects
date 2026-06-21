@@ -1,5 +1,6 @@
 import SectionTitle from "./SectionTitle"
 import { projects } from "../data/projects"
+import { useLanguage } from "../i18n/LanguageContext"
 
 function ExternalLink({ href, children, className }) {
   return (
@@ -15,27 +16,30 @@ function ExternalLink({ href, children, className }) {
 }
 
 function Projects() {
+  const { t } = useLanguage()
+
   return (
     <section id="projects" className="mx-auto max-w-6xl px-5 py-24">
       <SectionTitle
-        eyebrow="Projektek"
-        title="Saját weboldalak és digitális projektek."
-        text="Valós, élesben futó vagy aktívan fejlesztett projektek — webalkalmazásoktól vállalkozói oldalakig, ahol a frontend, backend és üzleti logika együtt dolgozik."
+        eyebrow={t.projects.eyebrow}
+        title={t.projects.title}
+        text={t.projects.text}
       />
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => {
+          const copy = t.projects.items[project.id]
           const image = (
             <img
               src={project.image}
-              alt={`${project.title} előnézet`}
+              alt={`${project.title} ${t.projects.previewAlt}`}
               className="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
             />
           )
 
           return (
             <article
-              key={project.title}
+              key={project.id}
               className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-white/[0.06]"
             >
               <div className="h-48 overflow-hidden border-b border-white/10 bg-slate-900">
@@ -52,13 +56,11 @@ function Projects() {
               </div>
 
               <div className="p-6">
-                <p className="mb-3 text-sm text-emerald-300">{project.category}</p>
+                <p className="mb-3 text-sm text-emerald-300">{copy.category}</p>
                 <h3 className="text-xl font-semibold text-white">
                   {project.title}
                 </h3>
-                <p className="mt-4 leading-7 text-slate-400">
-                  {project.description}
-                </p>
+                <p className="mt-4 leading-7 text-slate-400">{copy.description}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
@@ -77,12 +79,14 @@ function Projects() {
                       href={project.link}
                       className="text-emerald-300 transition hover:text-emerald-200"
                     >
-                      Weboldal megtekintése →
+                      {t.projects.viewWebsite}
                     </ExternalLink>
                   )}
 
                   {project.inDevelopment && !project.link && (
-                    <span className="text-slate-500">Fejlesztés alatt</span>
+                    <span className="text-slate-500">
+                      {t.projects.inDevelopment}
+                    </span>
                   )}
 
                   {project.github && (
@@ -90,12 +94,14 @@ function Projects() {
                       href={project.github}
                       className="text-slate-400 transition hover:text-emerald-300"
                     >
-                      GitHub →
+                      {t.projects.github}
                     </ExternalLink>
                   )}
 
                   {project.githubPrivate && (
-                    <span className="text-slate-500">GitHub · Privát repó</span>
+                    <span className="text-slate-500">
+                      {t.projects.githubPrivate}
+                    </span>
                   )}
                 </div>
               </div>
